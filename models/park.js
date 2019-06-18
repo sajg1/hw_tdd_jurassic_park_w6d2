@@ -22,6 +22,7 @@ mostPopular = 0;
   }
   for (dinosaur of this.dinosaurCollection) {
     if (mostPopular === dinosaur.guestsAttractedPerDay)
+// if there were multiple dinos with same guests attracted I could add these to an empty array.
     return dinosaur.species;
   }
 }
