@@ -50,8 +50,29 @@ describe('Park', function() {
     assert.strictEqual(actual, "T-Rex")
   });
 
-  it('should be able to find all dinosaurs of a particular species');
+  it('should show the total number of visitors per day', function () {
+    park.addDinosaur(dino1);
+    park.addDinosaur(dino2);
+    const actual = park.totalVisitorsPerDay();
+    assert.strictEqual(actual, 90);
+  });
 
-  it('should be able to remove all dinosaurs of a particular species');
+  it('should show the total number of visitors per year', function() {
+    park.addDinosaur(dino1);
+    park.addDinosaur(dino2);
+    const actual = park.totalVisitorsPerYear();
+    assert.strictEqual(actual, 32850);
+  });
+
+  xit('should show the total revenue per year from ticket sales', function () {
+    park.addDinosaur(dino1);
+    park.addDinosaur(dino2);
+    const actual = park.totalAnnualRevenue();
+    assert.strictEqual(actual, 328500)
+  });
+
+  xit('should be able to find all dinosaurs of a particular species');
+
+  xit('should be able to remove all dinosaurs of a particular species');
 
 });
