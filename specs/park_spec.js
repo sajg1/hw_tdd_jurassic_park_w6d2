@@ -46,7 +46,7 @@ describe('Park', function() {
   it('should be able to find the dinosaur that attracts the most visitors', function () {
     park.addDinosaur(dino1);
     park.addDinosaur(dino2);
-    const actual = park.mostPopularDinosaur()
+    const actual = park.mostPopularDinosaur();
     assert.strictEqual(actual, "T-Rex")
   });
 
@@ -64,7 +64,7 @@ describe('Park', function() {
     assert.strictEqual(actual, 32850);
   });
 
-  xit('should show the total revenue per year from ticket sales', function () {
+  it('should show the total revenue per year from ticket sales', function () {
     park.addDinosaur(dino1);
     park.addDinosaur(dino2);
     const actual = park.totalAnnualRevenue();

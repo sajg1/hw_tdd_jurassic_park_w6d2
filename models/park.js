@@ -38,24 +38,24 @@ Park.prototype.totalVisitorsPerDay = function () {
 }
 
 Park.prototype.totalVisitorsPerYear = function () {
-  let total=0;
-  for (dinosaur of this.dinosaurCollection) {
-    total += dinosaur.guestsAttractedPerDay;
-  }
-  annualTotal = total * 365;
-  return annualTotal
-  // this.dinosaurCollection.totalVisitorsPerDay();
-  // let totalPerYear = totalPerDay * 365;
+  // let total=0;
+  // for (dinosaur of this.dinosaurCollection) {
+  //   total += dinosaur.guestsAttractedPerDay;
+  // }
+  // annualTotal = total * 365;
+  // return annualTotal
+  return this.totalVisitorsPerDay() * 365;
 }
 
 Park.prototype.totalAnnualRevenue = function () {
-  let total=0;
-  for (dinosaur of this.dinosaurCollection) {
-    total += dinosaur.guestsAttractedPerDay;
-  }
-  const annualTotal = total * 365;
-  const annualRevenue = annualTotal * this.ticketPrice;
-  return annualRevenue;
+  // let total=0;
+  // for (dinosaur of this.dinosaurCollection) {
+  //   total += dinosaur.guestsAttractedPerDay;
+  // }
+  // const annualTotal = total * 365;
+  // const annualRevenue = annualTotal * this.ticketPrice;
+  // return annualRevenue;
+   return this.totalVisitorsPerYear() * this.ticketPrice;
 }
 
 
